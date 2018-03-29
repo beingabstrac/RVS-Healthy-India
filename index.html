@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RVS Healthy India</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login_div" class="main-div">
+    <h3>RVS Healthy India - <span style="color: red;">Login</span></h3>
+    <input type="email" placeholder="Email" id="email_field_Login" />
+    <input type="password" placeholder="Password" id="password_field_Login" />
+
+    <button class="btn" onclick="login()">Login</button>
+    <h5 style="color: red; cursor: pointer;" onclick="signupLogin()">Not a member? Get registered now!</h5>
+  </div>
+
+  <div id="signup_div" class="main-div">
+    <h3>RVS Healthy India - <span style="color: red;">SignUp</span></h3>
+    <input type="email" placeholder="Email" id="email_field_Signup" />
+    <input type="password" placeholder="Password" id="password_field_Signup" />
+
+    <button class="btn" onclick="signup()">Signup</button>
+    <h5 style="color: red; cursor: pointer;" onclick="loginSignup()">Already registered. Login Me!</h5>
+  </div>
+
+  <div id="user_div" class="loggedin-div">
+    <h3 id="user_para"></h3>
+    <button class="btn" onclick="addchildWelcome()">Add Child</button>
+    <button class="btn" onclick="showchild()">Show Child</button>
+    <h5 style="color: red; cursor: pointer;" onclick="logout()">Logout</h5>
+  </div>
+
+  <div id="addchild_div" class="main-div">
+    <h3>RVS Healthy India - <span style="color: red;">Add Child</span></h3>
+    <h5 style="text-align: left">Child details</h5>
+    <input type="text" placeholder="ASHA WORKER ID" id="asha_worker_id" />
+    <input type="text" placeholder="BIRTH CERTIFICATE NUMBER" id="birth_certificate_number" />
+    <input type="text" placeholder="CHILD ID" id="child_id" />
+    <input type="text" placeholder="CHILD NAME" id="child_name" />
+    <input type="text" placeholder="CHILD BLOOD GROUP" id="child_blood_group" />
+    <input type="text" placeholder="DOB" id="dob" />
+    <input type="text" placeholder="GENDER" id="gender" />
+    <input type="text" placeholder="HEIGHT" id="height" />
+    <input type="text" placeholder="WEIGHT" id="weight" />
+    <h5 style="text-align: left">Mother details</h5>
+    <input type="text" placeholder="HUSBAND NAME" id="husband_name" />
+    <input type="text" placeholder="MOTHER BLOOD GROUP" id="mother_blood_group" />
+    <input type="text" placeholder="MOTHER ID" id="mother_id" />
+    <input type="text" placeholder="MOTHER NAME" id="mother_name" />
+    <input type="text" placeholder="PHONE NUMBER 1" id="phone_number_one" />
+    <input type="text" placeholder="PHONE NUMBER 2" id="phone_number_two" />
+
+    <button class="btn" onclick="addchild()">Add Child</button>
+    <h5 style="color: black; cursor: pointer;" onclick="back()">&#60;&#60;back</h5>
+  </div>
+
+  <div id="showchild_div" class="table-div">
+    <h3>RVS Healthy India - <span style="color: red;">Show Child</span></h3>
+    <div style="overflow: scroll;" class="div_table">
+      <table>
+        <thead>
+          <tr>
+            <th>KEY</th>
+            <th>ASHA WORKER ID</th>
+            <th>BIRTH CERTIFICATE NUMBER</th>
+            <th>CHILD ID</th>
+            <th>CHILD NAME</th>
+            <th>CHILD BLOOD GROUP</th>
+            <th>DOB</th>
+            <th>GENDER</th>
+            <th>HEIGHT</th>
+            <th>WEIGHT</th>
+            <th>HUSBAND NAME</th>
+            <th>MOTHER BLOOD GROUP</th>
+            <th>MOTHER ID</th>
+            <th>MOTHER NAME</th>
+            <th>PHONE NUMBER 1</th>
+            <th>PHONE NUMBER 2</th>
+            <th>VACCINATION</th>
+          </tr>
+        </thead>
+        <tbody id="table_body"></tbody>
+      </table>
+    </div>
+
+    <h5 style="color: black; cursor: pointer;" onclick="back()">&#60;&#60;back</h5>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    var config = {
+      apiKey: "AIzaSyCyO1EC2NM8LnqjzrDJ8j_ll--zp0S3sdA",
+      authDomain: "rvs-healthy-india.firebaseapp.com",
+      databaseURL: "https://rvs-healthy-india.firebaseio.com",
+      projectId: "rvs-healthy-india",
+      storageBucket: "rvs-healthy-india.appspot.com",
+      messagingSenderId: "619350968939"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
