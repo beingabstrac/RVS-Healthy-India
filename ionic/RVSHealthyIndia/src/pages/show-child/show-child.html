@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Show Child Details</ion-title>
+    <ion-title>Show Child</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -10,9 +10,9 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item *ngFor="let child of child$ | async" detail-push navPush="EditChildDetailPage" [navParams]="{child: child}">
-      asha_worker_id : {{child.asha_worker_id}} <br>
-      birth_certificate_number : {{child.birth_certificate_number}}
+    <ion-item *ngFor="let child of child$ | async" detail-push navPush="ShowChildDetailsPage" [navParams]="{child: child}">
+      Child ID : {{child.child_id}} <br>
+      Child name : {{child.child_name}} <br>
     </ion-item>
   </ion-list>
 

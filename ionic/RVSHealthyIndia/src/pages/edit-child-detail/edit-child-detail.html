@@ -15,6 +15,10 @@
 
 <ion-content padding>
 
+  <ion-label>
+    Child Details
+  </ion-label>
+
   <ion-item>
     <ion-label floating>Asha worker ID</ion-label>
     <ion-input type="text" [(ngModel)]="child.asha_worker_id"></ion-input>
@@ -23,6 +27,77 @@
   <ion-item>
     <ion-label floating>Birth certificate number</ion-label>
     <ion-input type="text" [(ngModel)]="child.birth_certificate_number"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Child ID</ion-label>
+    <ion-input type="text" [(ngModel)]="child.child_id"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Child name</ion-label>
+    <ion-input type="text" [(ngModel)]="child.child_name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Child blood group</ion-label>
+    <ion-input type="text" [(ngModel)]="child.child_blood_group"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>DOB</ion-label>
+    <ion-input type="text" [(ngModel)]="child.dob"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Gender</ion-label>
+    <ion-input type="text" [(ngModel)]="child.gender"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Height</ion-label>
+    <ion-input type="text" [(ngModel)]="child.height"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Weight</ion-label>
+    <ion-input type="text" [(ngModel)]="child.weight"></ion-input>
+  </ion-item>
+
+  <br>
+
+  <ion-label>
+    Mother Details
+  </ion-label>
+
+  <ion-item>
+    <ion-label floating>Husband Name</ion-label>
+    <ion-input type="text" [(ngModel)]="child.husband_name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Mother blood Group</ion-label>
+    <ion-input type="text" [(ngModel)]="child.mother_blood_group"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Mother ID</ion-label>
+    <ion-input type="text" [(ngModel)]="child.mother_id"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Mother Name</ion-label>
+    <ion-input type="text" [(ngModel)]="child.mother_name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Phone Number 1</ion-label>
+    <ion-input type="text" [(ngModel)]="child.phone_number_one"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Phone Number 2</ion-label>
+    <ion-input type="text" [(ngModel)]="child.phone_number_two"></ion-input>
   </ion-item>
 
   <button ion-button block clear (click)="saveChild(child)">Save</button>

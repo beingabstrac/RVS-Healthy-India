@@ -25,15 +25,15 @@ export class EditChildDetailPage {
 
   saveChild(child: Child) {
     this.childList.editChild(child).then(() => {
-      this.toast.show(`${child.asha_worker_id} saved!`)
-      this.navCtrl.push('HomePage');
+      this.toast.show(`Deatils saved successfully!`)
+      this.navCtrl.setRoot('ShowChildPage');
     })
   }
 
   removeChild(child: Child) {
     this.childList.removeChild(child).then(() => {
-      this.toast.show(`${child.asha_worker_id} deleted!`)
-      this.navCtrl.push('HomePage');
+      this.toast.show(`Deleted successfully!`)
+      this.navCtrl.setRoot('ShowChildPage');
     })
   }
 

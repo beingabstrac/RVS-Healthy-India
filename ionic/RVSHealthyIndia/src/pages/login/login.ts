@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
-import { User } from '../../models/user/user';
-
 
 @IonicPage()
 @Component({
@@ -11,22 +9,17 @@ import { User } from '../../models/user/user';
 })
 export class LoginPage {
 
-  user = {} as User;
+  @ViewChild('email') email;
+  @ViewChild('password') password;
 
   constructor(private afauth: AngularFireAuth,
     public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  async login(user: User) {
-    try {
-      const result = await this.afauth.auth.signInWithEmailAndPassword(user.email, user.password);
-      if (result) {
-        this.navCtrl.setRoot('HomePage');
-      }
-    }
-    catch (e) {
-      console.error(e);
-    }
+  login() {
+    this.afauth.auth.signInWithEmailAndPassword(this.email.value, this.password.value).then(data => {
+      this.navCtrl.setRoot('HomePage');
+    })
   }
 
   register() {

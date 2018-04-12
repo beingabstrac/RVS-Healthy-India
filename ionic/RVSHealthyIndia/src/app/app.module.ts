@@ -1,3 +1,4 @@
+import { Push } from '@ionic-native/push';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -30,6 +31,7 @@ import { ToastService } from '../services/toast/toast.service';
   providers: [
     StatusBar,
     SplashScreen,
+    Push,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ChildListService,
     ToastService

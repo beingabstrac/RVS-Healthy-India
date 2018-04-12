@@ -32,7 +32,9 @@ function addchildWelcome() {
 }
 
 function back() {
-  window.location.reload()
+  document.getElementById("user_div").style.display = "block";
+  document.getElementById("addchild_div").style.display = "none";
+  document.getElementById("showchild_div").style.display = "none";
 }
 
 function login() {

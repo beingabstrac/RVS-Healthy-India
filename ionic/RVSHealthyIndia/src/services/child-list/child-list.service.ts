@@ -5,9 +5,10 @@ import { Child } from "../../models/child/child.model";
 @Injectable()
 export class ChildListService {
 
-    constructor(private db: AngularFireDatabase) { }
-    
-    private childListRef = this.db.list<Child>('child');
+    constructor(private db: AngularFireDatabase) {
+    }
+
+    private childListRef = this.db.list<Child>('email');
 
     getChild() {
         return this.childListRef;

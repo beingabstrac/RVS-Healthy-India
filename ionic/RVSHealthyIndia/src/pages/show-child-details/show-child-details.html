@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Child Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card>
+    
+      <ion-card-content>
+        Asha worker ID : {{child.asha_worker_id}} <br>
+        Birth certificate number : {{child.birth_certificate_number}} <br>
+        Child ID : {{child.child_id}} <br>
+        Child name : {{child.child_name}} <br>
+        Child blood group : {{child.child_blood_group}} <br>
+        DOB : {{child.dob}} <br>
+        Gender : {{child.gender}} <br>
+        Height : {{child.height}} <br>
+        Weight : {{child.weight}} <br>
+        Husband Name : {{child.husband_name}} <br>
+        Mother blood Group : {{child.mother_blood_group}} <br>
+        Mother ID : {{child.mother_id}} <br>
+        Mother Name : {{child.mother_name}} <br>
+        Phone Number 1 : {{child.phone_number_one}} <br>
+        Phone Number 2 : {{child.phone_number_two}} <br>
+        <button ion-button (click)="vaccination()">Vaccination</button>
+        <button ion-button detail-push navPush="EditChildDetailPage" [navParams]="{child: child}" color="light">Edit Child</button>
+      </ion-card-content>
+    
+    </ion-card>
+
+</ion-content>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, IonicPage, ToastController } from 'ionic-angular';
+import { NavController, IonicPage } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth'
 
 @IonicPage()
@@ -9,24 +9,15 @@ import { AngularFireAuth } from 'angularfire2/auth'
 })
 export class HomePage {
 
-  constructor(private afauth: AngularFireAuth, private toast: ToastController,
-    public navCtrl: NavController) {
+  email: string = "";
+
+  constructor(private afauth: AngularFireAuth, public navCtrl: NavController) {
+    this.email = afauth.auth.currentUser.email;
   }
 
-  ionViewWillLoad() {
-    this.afauth.authState.subscribe(data => {
-      if (data && data.email && data.uid) {
-        this.toast.create({
-          message: `Welcome ${data.email}`,
-          duration: 3000
-        }).present();
-      }
-      else {
-        this.toast.create({
-          message: `Could not find authentication details.`,
-          duration: 3000
-        }).present();
-      }
+  logout() {
+    this.afauth.auth.signOut().then(data => {
+      this.navCtrl.setRoot('LoginPage');
     })
   }
 
@@ -36,6 +27,10 @@ export class HomePage {
 
   showchild() {
     this.navCtrl.push('ShowChildPage');
+  }
+
+  vaccMaps() {
+    this.navCtrl.push('VaccMapsPage');
   }
 
 }

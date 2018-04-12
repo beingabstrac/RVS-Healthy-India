@@ -1,0 +1,524 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Vaccination</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="vacc">
+      <ion-segment-button value="birth">
+        Birth
+      </ion-segment-button>
+      <ion-segment-button value="onh">
+        1 1/2
+      </ion-segment-button>
+      <ion-segment-button value="twnh">
+        2 1/2
+      </ion-segment-button>
+      <ion-segment-button value="thnh">
+        3 1/2
+      </ion-segment-button>
+      <ion-segment-button value="nnh">
+        9
+      </ion-segment-button>
+      <ion-segment-button value="snh">
+        16
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="vacc">
+
+    <!-- birth -->
+    <ion-list *ngSwitchCase="'birth'">
+
+      <ion-list padding>
+        <h3>BCG</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list padding>
+        <h3>OPV 0</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list padding>
+        <h3>HEP B</h3>
+        <ion-label></ion-label>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+    </ion-list>
+
+    <!-- onh -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <ion-list *ngSwitchCase="'onh'">
+
+      <ion-list padding>
+        <h3>OPV 1</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list padding>
+        <h3>PENTA 1</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list padding>
+        <h3>IPV 1</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list padding>
+        <h3>ROTA 1</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+    </ion-list>
+
+    <!-- twnh -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <ion-list *ngSwitchCase="'twnh'">
+
+      <ion-list padding>
+        <h3>OPV 2</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list padding>
+        <h3>PENTA 2</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list padding>
+        <h3>ROTA 2</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+    </ion-list>
+
+    <!-- thnh -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <ion-list *ngSwitchCase="'thnh'">
+
+      <ion-list padding>
+        <h3>OPV 3</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list padding>
+        <h3>PENTA 3</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list padding>
+        <h3>IPV 2</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list padding>
+        <h3>ROTA 3</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+    </ion-list>
+
+    <!-- nnh -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <ion-list *ngSwitchCase="'nnh'">
+
+      <ion-list padding>
+        <h3>MR 1</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list padding>
+        <h3>JE 1</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+    </ion-list>
+
+    <!-- snh -->
+    <!-- ------------------------------------------------------------------------------------------------------------------------------ -->
+
+    <ion-list *ngSwitchCase="'snh'">
+
+      <ion-list padding>
+        <h3>MR 2</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+
+      <ion-list padding>
+        <h3>JE 2</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list padding>
+        <h3>OPV BOOSTER</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-list padding>
+        <h3>DPT 1 BOOSTER</h3>
+        <ion-item>
+          <ion-label>Start Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Due Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label>Given Date</ion-label>
+          <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <button ion-button full>OTP</button>
+        </ion-item>
+        <ion-item>
+          <ion-input type="text" placeholder="OTP"></ion-input>
+        </ion-item>
+      </ion-list>
+
+    </ion-list>
+
+  </div>
+
+</ion-content>

@@ -4,7 +4,7 @@
       RVS Healthy India
     </ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="asd()">
+      <button ion-button icon-only (click)="logout()">
         <ion-icon name="log-out"></ion-icon>
       </button>
     </ion-buttons>
@@ -13,7 +13,10 @@
 
 <ion-content padding>
 
+  <h5>Welcome {{email}}</h5>
+
   <button ion-button (click)="addchild()">Add Child</button>
-  <button ion-button (click)="showchild()">Show Child Details</button>
+  <button ion-button (click)="showchild()">Show Child</button>
+  <button ion-button (click)="vaccMaps()">Vaccination on Maps</button>
 
 </ion-content>

@@ -1,6 +1,6 @@
 {
   "name": "RVSHealthyIndia",
-  "app_id": "",
+  "app_id": "2d6988c0",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
